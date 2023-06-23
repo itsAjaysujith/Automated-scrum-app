@@ -1,0 +1,13 @@
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1800px) {
+    .card{
+        margin-left: 60px;
+    }
+    /* For portrait layouts only */
+  }
+
+  @media only screen and (min-device-width: 60px) and (max-device-width: 1000px) {
+    .card{
+        margin-left: 20px;
+    }
+    /* For portrait layouts only */
+  }

@@ -1,0 +1,83 @@
+
+
+<section class=" text-center text-lg-start position-relative">
+  <div class="container-fluid row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="card" style="margin-top:100px">
+        <div class="row g-0 d-flex align-items-center">
+          <div class="col-lg-4 d-none d-lg-flex">
+            <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" alt="Trendy Pants and Shoes"
+              class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+          </div>
+          <div class="col-lg-8">
+            <div class="card-body py-5 px-md-5">
+
+              <form [formGroup]="storyAndPoints">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form2Example1" class="form-control" placeholder="Story Name" name="story" formControlName="story"
+                   />
+                    <div *ngIf="storyAndPoints.controls['story'].errors && (storyAndPoints.controls['story'].touched ) ">
+
+                        <div *ngIf="this.storyAndPoints.controls['story'].errors['required']">
+                            <p class="text-danger">*This field is required</p>
+                        </div>
+                        <div *ngIf="this.storyAndPoints.controls['story'].errors['minlength']">
+                            <p class="text-danger">*Minimum Length 3 is required</p>
+                        </div>
+    
+                        <div *ngIf="this.storyAndPoints.controls['story'].errors['maxlength']">
+                            <p class="text-danger">*Only 15 letters Required</p>
+    
+                        </div>
+                        </div>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="number" id="form2Example2" class="form-control" formControlName="point" placeholder="Story point" name="points"
+                    />
+
+                            
+                    <div *ngIf="storyAndPoints.controls['point'].errors && (this.storyAndPoints.controls['point'].touched  )">
+
+                        <div *ngIf="storyAndPoints.controls['point'].errors['required']">
+                            <p class="text-danger">*This field is required</p>
+                        </div>
+                        <div *ngIf="storyAndPoints.controls['point'].errors['min']">
+                            <p class="text-danger">*minimum required point is 1</p>
+                        </div>
+    
+                        <div *ngIf="storyAndPoints.controls['point'].errors['max']">
+                            <p class="text-danger">*maximum Point is 60</p>
+    
+                        </div>
+    
+    
+                    </div>
+                </div>
+
+
+                <div class="text-center">
+                  <button type="button" class="btn btn-secondary btn-block mb-4" (click)="addStories()">Add
+                    story</button>
+
+                    <button *ngIf="stories.length" type="button" class="btn btn-secondary btn-block mb-4 mx-5" routerLink="/stories">Go to stories</button>
+
+                </div>
+                <!-- Submit button -->
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+
+  </div>
+
+</section>
+<!-- Section: Design Block -->
