@@ -44,6 +44,7 @@ export class SprintCalculatorComponent implements OnInit {
     setTimeout(() => {
       this.AutoSelectedStoriesComponent.autoSelectStories()
     }, 500);
+    alert('Cleared Successfully')
 
   }
 

@@ -15,7 +15,7 @@ storyAndPoints!: FormGroup
   constructor(private route:Router,private dataService:DataService,private fb:FormBuilder) { 
     this.storyAndPoints = this.fb.group({
 
-      story: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
+      story: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       point: ['', [Validators.required, Validators.min(1), Validators.max(50)]],
     
     })
